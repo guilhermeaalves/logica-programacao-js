@@ -29,6 +29,7 @@ Em cada uma das operações, temos um operador aritmético:
 * `*` -> multiplicação
 * `/` -> divisão
 * `%` -> resto da divisão
+* `**` -> potênciação
 
 ## op-atribuicao.js
 
@@ -61,3 +62,37 @@ Operadores de atribuição:
 * `%=` -> atribuição com resto da divisão
 * `++` -> atribuição com **incremento 1** (pode ser *pré* ou *pós* incrementado). Ex: `numero ++` (pós-incremento) ou `++ numero` (pré-incremento).
 * `--` -> atribuição com **decremento 1** (pode ser *pré* ou *pós* decrementado). Ex: `numero --` (pós-decremento) ou (pré-decremento) `-- numero`
+
+## op-comparacao.js
+
+Neste arquivo conhecemos os operadores de comparação e a estrutura da lógica de decisão **if-else**.
+
+~~~js
+const a = '52', b = 52;
+const condicao = a == b;
+~~~
+
+A palavra `const` é utilizada para declaração de variáveis que não vão ser reatribuídas (não permite reatribuição).
+
+Aqui declaramos duas condições que serão são exibidas no console como `True` (verdadeiro) ou `False` (falso). A condição armazena o resultado da **comparação entre duas variáveis**
+
+~~~js
+if (condicao)
+    {
+    console.log('VERDADEIRO');
+}
+
+else {
+    console.log('FALSO');
+}
+~~~
+
+Operadores de comparação:
+
+* `===` -> é estritamente igual, (valor e tipo)
+* `==` -> é igual
+* `!==` -> não é estritamente igual, (valor ou tipo)
+* `>` -> maior que
+* `<` -> menor que
+* `>=`-> maior OU igual
+* `<=` -> menor OU igual
