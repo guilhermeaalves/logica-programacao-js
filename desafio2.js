@@ -13,6 +13,6 @@ if(imc <= 18.5){
         window.alert(`Obesidade grau I`);
     } else if (imc <= 39.9){
         window.alert (`Obesidade grau II`);
-    } else {
-    window.alert (`Obesidade grau III`);
+    } else if (imc > 40){
+        window.alert (`Obesidade grau III`);
 }
