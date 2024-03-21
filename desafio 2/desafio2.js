@@ -1,7 +1,7 @@
-function calculaIMC() {
+function calculaIMC(peso, altura) {
     
     const
-    calculaIMC= (peso / altura **2);
+    calculaIMC = (peso / altura **2);
     let mensagem;
 
     if (calculaIMC <= 18.5){
