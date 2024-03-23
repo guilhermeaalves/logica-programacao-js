@@ -96,3 +96,5 @@ Operadores de comparação:
 * `<` -> menor que
 * `>=`-> maior OU igual
 * `<=` -> menor OU igual
+
+<h4 align="center"><a href="https://guilhermeaalves.github.io/logica-programacao-js/">Veja meu projeto aqui</a></h4>
