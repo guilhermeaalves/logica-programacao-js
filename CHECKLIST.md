@@ -25,5 +25,9 @@ git clone https://github.com/<usuario>/<repositorio>.git
 ~~~bash
 code -r <repositorio_local>/
 ~~~
+Ou usar essa combinação dos dois comandos na mesma linha, separados pelo pipe |
+~~~bash
+git clone https://github.com/<usuario>/<repositorio>.git | code -r <repositorio_local>/
+~~~
 12. Faça login no VS Code local para sincronizar suas extensões e temas
 13. Ative o salvamento automático _(Auto Save)_: Arquivo > Salvamento automático
