@@ -9,7 +9,7 @@
 
 <body>
     <h1>Programas</h1>
-    <button type="button" onclick="converteTemperatura()">Conversor de Temperatura</button>
+
     <button type="button" onclick="CalculadoraDeMedia()">Calculadora de Média</button>
 
     <h2>Calculadora IMC</h2>
@@ -31,16 +31,16 @@
 
     <h2>Conversor de Temperatura</h2>
 
-    <form action="">
+    <form action="" id=formConversor>
 
         <label for="valorTemperatura">Temperatura:</label>
         <input type="number" id="valorTemperatura">
 
         <label for="escalaAtual">De:</label>
         <select id="escalaAtual">
-            <option value="c" selected>Celsius</option>
-            <option value="f">Fahrenheit</option>
-            <option value="k">Kelvin</option>
+            <option value="c" id="cAtual" selected>Celsius</option>
+            <option value="f" id="fAtual">Fahrenheit</option>
+            <option value="k" id="kAtual">Kelvin</option>
         </select>
 
         <label for="escalaConvertida">Para:</label>
@@ -50,9 +50,11 @@
             <option value="k">Kelvin</option>
         </select>
 
-        <button type="button">Converter</button>
-        <button type="reset">Limpar</button>
+        <button type="button" id="btCalcTemp">Converter</button>
+        <button type="reset" id="btResetTemp">Limpar</button>
     </form>
+
+    <div id="resultadoTemp"></div>
 
     <script>
         document.querySelector('#btCalcImc').addEventListener('click', function () {
@@ -66,7 +68,23 @@
             document.querySelector('#resultadoIMC').innerHTML = "";
         });
     </script>
-    
+
+    <script>
+        document.querySelector('#btCalcTemp').addEventListener('click', function () {
+            const valorTemperatura = document.querySelector('#valorTemperatura').value;
+            const escalaAtual = document.querySelector('#escalaAtual').value;
+            const escalaConvertida = document.querySelector('#escalaConvertida').value;
+            const resultado = converteTemperatura(valorTemperatura, escalaAtual, escalaConvertida);
+            console.log(resultado);
+            document.querySelector('#resultadoTemp').innerHTML = resultado;
+        });
+
+        document.querySelector('#btResetTemp').addEventListener('click', function () {
+            document.querySelector('#resultadoTemp').innerHTML = "";
+        });
+
+    </script>
+
     <script src="desafio 3/desafio3.js"></script>
     <script src="desafio 2/desafio2.js"></script>
     <script src="desafio 1/desafio1_2.js"></script>
