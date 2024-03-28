@@ -3,53 +3,58 @@
 Entradas (3): valor atual da temperatura, escala atual da temperatura, escala para exibição (conversão).
 */
 
-function converteTemperatura() {
-let mensagem;
+function converteTemperatura(valorTemperatura, escalaAtual, escalaConvertida) {
+    let resultado;
 
     if (!isNaN(valorTemperatura)) {
 
 
-        if (atual === 'c') {
+        if (escalaAtual === 'c') {
 
-            if (conversao === 'k') {
-                mensagem = (`${valorTemperatura} em ${atual} -> ${(valorTemperatura + 273.15).toFixed(2)}`);
+            if (escalaConvertida === 'k') {
+                resultado = (`${valorTemperatura} em ${escalaAtual} -> ${(valorTemperatura + 273.15).toFixed(2)}`);
             }
 
-            else if (conversao === 'f') {
-                mensagem = (`${valorTemperatura} em ${atual} -> ${(valorTemperatura * 9 / 5 + 32).toFixed(2)}°F`);
+            else if (escalaConvertida === 'f') {
+                resultado = (`${valorTemperatura} em ${escalaAtual} -> ${(valorTemperatura * 9 / 5 + 32).toFixed(2)}°F`);
             }
 
-            else if (conversao === 'c') {
-                mensagem = (`Escala selecionada: ${conversao}. Selecione uma escala de CONVERSÃO diferente da ATUAL.`)
-            }
-        } else if (atual === 'f') {
-
-            if (conversao === 'k') {
-                mensagem = (`${valorTemperatura} em ${atual} -> ${(valorTemperatura + 459.67) * 5 / 9 .toFixed(2)}`)
+            else if (escalaConvertida === 'c') {
+                resultado = (`ERRO escala selecionada: ${escalaConvertida}. Selecione uma escala de CONVERSÃO diferente da ATUAL.`)
             }
 
-            else if (conversao === 'c') {
-                mensagem = (`${valorTemperatura} em ${atual} -> ${((valorTemperatura - 32) * 5 / 9 .toFixed(2))}`);
+        } else if (escalaAtual === 'f') {
+
+            if (escalaConvertida === 'k') {
+                resultado = (`${valorTemperatura} em ${escalaAtual} -> ${(valorTemperatura + 459.67) * 5 / 9 .toFixed(2)}`)
             }
 
-            else if (conversao === 'f') {
-                mensagem = (`Escala selecionada: ${conversao}. Selecione uma escala de CONVERSÃO diferente da ATUAL.`)
-            }
-        }
-        else if (atual === 'k') {
-
-            if (conversao === 'f') {
-                mensagem = (`${valorTemperatura} em ${atual} -> ${(valorTemperatura * 9 / 5 - 459.67.toFixed(2))}`);
+            else if (escalaConvertida === 'c') {
+                resultado = (`${valorTemperatura} em ${escalaAtual} -> ${((valorTemperatura - 32) * 5 / 9 .toFixed(2))}`);
             }
 
-            else if (conversao === 'c') {
-                mensagem = (`${valorTemperatura} em ${atual} -> ${(valorTemperatura - 273.15.toFixed(2))}`);
-            }
-
-            else if (conversao === 'f') {
-                mensagem = (`Escala selecionada: ${conversao}. Selecione uma escala de CONVERSÃO diferente da ATUAL.`)
+            else if (escalaConvertida === 'f') {
+                resultado = (`ERRO escala selecionada: ${escalaConvertida}. Selecione uma escala de CONVERSÃO diferente da ATUAL.`)
             }
         }
+        else if (escalaAtual === 'k') {
 
+            if (escalaConvertida === 'f') {
+                resultado = (`${valorTemperatura} em ${escalaAtual} -> ${(valorTemperatura * 9 / 5 - 459.67.toFixed(2))}`);
+            }
+
+            else if (escalaConvertida === 'c') {
+                resultado = (`${valorTemperatura} em ${escalaAtual} -> ${(valorTemperatura - 273.15.toFixed(2))}`);
+            }
+
+            else if (escalaConvertida === 'k') {
+                resultado = (`ERRO escala selecionada: ${escalaConvertida}. Selecione uma escala de CONVERSÃO diferente da ATUAL.`)
+            }
+        }
+        else {
+            msgErro = 'ERRO: O número digitado para conversão não é um número válido.';
+        }
     }
+
+    return resultado;
 }
