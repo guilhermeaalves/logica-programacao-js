@@ -12,11 +12,11 @@ function converteTemperatura(valorTemperatura, escalaAtual, escalaConvertida) {
         if (escalaAtual === 'c') {
 
             if (escalaConvertida === 'k') {
-                resultado = (`${valorTemperatura} em ${escalaAtual} -> ${(valorTemperatura + 273.15).toFixed(2)}`);
+                resultado = escalaAtual + 273.15.toFixed(2);
             }
 
             else if (escalaConvertida === 'f') {
-                resultado = (`${valorTemperatura} em ${escalaAtual} -> ${(valorTemperatura * 9 / 5 + 32).toFixed(2)}°F`);
+                resultado = valorTemperatura * 9 / 5 + 32;
             }
 
             else if (escalaConvertida === 'c') {
@@ -26,11 +26,11 @@ function converteTemperatura(valorTemperatura, escalaAtual, escalaConvertida) {
         } else if (escalaAtual === 'f') {
 
             if (escalaConvertida === 'k') {
-                resultado = (`${valorTemperatura} em ${escalaAtual} -> ${(valorTemperatura + 459.67) * 5 / 9 .toFixed(2)}`)
+                resultado = (valorTemperatura - 32) * 5 / 9 + 273.15 .toFixed(2);
             }
 
             else if (escalaConvertida === 'c') {
-                resultado = (`${valorTemperatura} em ${escalaAtual} -> ${((valorTemperatura - 32) * 5 / 9 .toFixed(2))}`);
+                resultado = (valorTemperatura - 32) * 5 / 9 .toFixed(2);
             }
 
             else if (escalaConvertida === 'f') {
@@ -40,11 +40,11 @@ function converteTemperatura(valorTemperatura, escalaAtual, escalaConvertida) {
         else if (escalaAtual === 'k') {
 
             if (escalaConvertida === 'f') {
-                resultado = (`${valorTemperatura} em ${escalaAtual} -> ${(valorTemperatura * 9 / 5 - 459.67.toFixed(2))}`);
+                resultado = valorTemperatura * 9 / 5 - 459.67.toFixed(2);
             }
 
             else if (escalaConvertida === 'c') {
-                resultado = (`${valorTemperatura} em ${escalaAtual} -> ${(valorTemperatura - 273.15.toFixed(2))}`);
+                resultado = valorTemperatura - 273.15.toFixed(2);
             }
 
             else if (escalaConvertida === 'k') {
