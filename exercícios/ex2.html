@@ -18,7 +18,7 @@
         <label for="tipo" id="comprador">Tipo:</label>
 
         <select id="tipoComprador">
-            <option value="comum" selected>Cliente comum</option>
+            <option value="comum" id="comum" selected>Cliente comum</option>
             <option value="funcionario" id="funcionario">Funcionário</option>
             <option value="vip" id="vip">VIP</option>
         </select>
@@ -30,16 +30,19 @@
     <div id="resultado"></div>
 
     <script>
-        document.querySelector('#btCalc').addEventListener('click', function () {
-            const valor = document.querySelector('#valor').value;
-            const tipoComprador = document.querySelector('#tipoComprador').value;
-            const resultado = DescontoFuncionario(valor, tipoComprador);
-            console.log(resultado);
-            document.querySelector('#resultado').innerHTML = resultado;
-        });
+        function DescontoFuncionario(){
+            let tipoComprador = parseInt(document.getElementById('tipoComprador').value),
+            resultado = valor;
+
+            if(tipoComprador === comum){
+                resultado = valor;
+            }
+            else if(tipoComprador = funcionario){
+                resultado = (valor * 0.1);
+            }
+        }
     </script>
 
-    <script src="desafioDescontoFuncionario.js"></script>
-</body>
+    </body>
 
 </html>

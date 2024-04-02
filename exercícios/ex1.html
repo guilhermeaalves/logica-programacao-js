@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="">
+        <label for="ladoA">lado A:</label>
+        <input type="number" min="0" id="ladoA">
+
+        <label for="ladoB" >lado B:</label>
+        <input type="number" min="0" id="ladoB">
+
+        <label for="ladoC">lado C:</label>
+        <input type="number" min="0" id="ladoC">
+
+        <button type="button" id="btClass">Classificar</button>
+        <button type="reset" id="btlimpa">Limpar</button>
+    </form>
+
+    <div id="resultado"></div>
+
+    <style>
+        
+    </style>
+
+    <script>
+
+        document.querySelector('#btClass').addEventListener('click', function () {
+
+            // casting -> definir um tipo diferente
+
+            const ladoA = Number(document.querySelector('#ladoA').value);
+            const ladoB = Number(document.querySelector('#ladoB').value);
+            const ladoC = Number(document.querySelector('#ladoC').value);
+
+            const classificacao = classificaTriangulo(ladoA, ladoB, ladoC);
+
+            document.querySelector('#resultado').innerHTML = classificacao;
+
+        });
+
+
+
+        function classificaTriangulo(ladoA, ladoB, ladoC) {
+
+            let mensagemErro, tipoTriangulo;
+
+            if ((ladoA < (ladoB + ladoC)) && (ladoB < (ladoA + ladoC)) && (ladoC < (ladoA + ladoB))) {
+
+                if (ladoA === ladoB && ladoB === ladoC) {
+                    tipoTriangulo = 'Equilátero';
+                }
+                else if (ladoA === ladoB || ladoA === ladoC || ladoB === ladoC) {
+                    tipoTriangulo = 'Isóceles'
+                }
+                else {
+                    tipoTriangulo = 'Escaleno'
+                }   
+            } 
+            
+            else {
+                mensagemErro = 'A forma não é um triângulo';
+            }
+
+            return tipoTriangulo ?? mensagemErro;
+
+            // ?? => operador de coalescência, pega o primeiro valor válido.
+        }
+    </script>
+</body>
+
+</html>
