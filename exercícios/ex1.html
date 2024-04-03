@@ -4,29 +4,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 
 <body>
-    <form action="">
-        <label for="ladoA">lado A:</label>
-        <input type="number" min="0" id="ladoA">
+    
+    <div id="Identificador">
 
-        <label for="ladoB" >lado B:</label>
-        <input type="number" min="0" id="ladoB">
+        <h1></h1>
 
-        <label for="ladoC">lado C:</label>
-        <input type="number" min="0" id="ladoC">
+        <form action="">
+            <label for="ladoA">lado A:</label>
+            <input type="number" min="0" id="ladoA">
+    
+            <label for="ladoB" >lado B:</label>
+            <input type="number" min="0" id="ladoB">
+    
+            <label for="ladoC">lado C:</label>
+            <input type="number" min="0" id="ladoC">
 
-        <button type="button" id="btClass">Classificar</button>
-        <button type="reset" id="btlimpa">Limpar</button>
-    </form>
+            
+            <button type="button" id="btClass">Classificar</button>
+            <button type="reset" id="btlimpa">Limpar</button>
 
-    <div id="resultado"></div>
+            <div id="resultado"></div>
+        </form>
+    
 
-    <style>
-        
-    </style>
+    </div>
 
     <script>
 
@@ -42,6 +48,10 @@
 
             document.querySelector('#resultado').innerHTML = classificacao;
 
+        });
+
+        document.querySelector('#btLimpa').addEventListener('click', function () {
+            document.querySelector('#resultado').innerHTML = "";
         });
 
 

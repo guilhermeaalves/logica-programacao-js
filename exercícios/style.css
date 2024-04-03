@@ -1,0 +1,40 @@
+/* estilo geral */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+    font-family: "DM Sans", sans-serif;
+    font-weight: 500;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+body{
+    background-color: #fffdff; 
+}
+
+#Identificador{
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1%;
+    background-color: #e5e5e5a1; 
+}
+
+input{
+    border: none;
+    border-radius: 1px; 
+}
+
+button#btClass{
+    margin: 0 55px;
+    border: none;
+    background-color: #4afc52;
+}
+
+button#btlimpa{
+    border: none;
+    background-color: #e91001;
+}
