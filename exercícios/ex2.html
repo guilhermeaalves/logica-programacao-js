@@ -41,9 +41,13 @@
             document.getElementById('resultado').innerHTML = valorFinal;
         });
 
+        document.querySelector('#btReset').addEventListener('click', function () {
+            document.querySelector('#resultado').innerHTML = "";
+        });
+
         function DescontoFuncionario(valor, tipoComprador) {
 
-            
+
             if (tipoComprador === "vip") {
                 resultado = valor - (valor * 0.05);
             }

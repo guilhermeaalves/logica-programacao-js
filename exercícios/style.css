@@ -16,7 +16,7 @@ body{
 
 h1{
     text-align: center;
-    padding: 2%;
+    padding: 1%;
 }
 
 
@@ -30,8 +30,8 @@ body {
 
 section{
     display: flex;
-    width: 250px;
-    height: 300px;
+    width: 25vw;
+    height: 40vw;
     background-color: #f0f0f0;
     padding: 1%;
     align-items: center;

@@ -22,13 +22,14 @@
     
             <label for="ladoC">lado C:</label>
             <input type="number" min="0" id="ladoC">
-    
+            
+            <div id="resultado"></div>
+            
             <div class="butao">
                 <button type="button" id="btClass">Classificar</button>
                 <button type="reset" id="btlimpa">Limpar</button>
             </div>
     
-            <div id="resultado"></div>
         </form>
 
     </section>
@@ -49,7 +50,7 @@
 
         });
 
-        document.querySelector('#btLimpa').addEventListener('click', function () {
+        document.querySelector('#btlimpa').addEventListener('click', function () {
             document.querySelector('#resultado').innerHTML = "";
         });
 
