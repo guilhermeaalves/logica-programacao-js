@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <table border="1">
+
+        <caption>Este posto não lava dinheiro pro PT</caption>
+
+        <thead>
+            <tr>
+                <th>Álcool <strong>R$ 2,89</strong></th>
+                <th>Gasosa <strong>R$ 5,19</strong></th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>Até 20 litros, desconto de 3% por litro</td>
+                <td>Até 20 litros, desconto de 4% por litro</td>
+            </tr>
+
+            <tr>
+                <td>Acima de 20 litros, desconto de 5% por litro</td>
+                <td>Acima de 20 litros, desconto de 6% por litro</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <form action="" id="Posto de Gasolina">
+        <label for="litros">Insira a quantidade de litros:</label>
+        <input type="number" id="litros">
+
+        <label for="combustivel" id="combustivel">Escolha o combustível deseja:</label>
+
+        <select id="tipoCombustivel">
+            <option value="g" selected>Gasosa</option>
+            <option value="a" selected>Álcool</option>
+        </select>
+
+        <button type="button" id="btCombustivel">Calcular</button>
+        <button type="reset" id="btReset">Limpar</button>
+    </form>
+    <div id="resultado"></div>
+    <script>
+
+        document.getElementById('btCombustivel').addEventListener('click', function () {
+            litros = parseFloat(document.getElementById('litros').value);
+            tipoCombustivel = document.getElementById('tipoCombustivel').value;
+
+            const valorFinal = descontoCombustivel(tipoCombustivel, litros);
+
+            document.getElementById('resultado').innerHTML = valorFinal;
+        });
+
+        document.querySelector('#btReset').addEventListener('click', function () {
+            document.querySelector('#resultado').innerHTML = "";
+        });
+
+
+    
+
+        function descontoCombustivel(tipoCombustivel, litros) {
+
+            let alcool = 2.89;
+            let gasosa = 5.19;
+
+            if (tipoCombustivel === 'Gasosa') {
+
+                if (litros >= 20) {
+                    resultado = litros * gasosa * 0.05;
+                }
+                else if{
+                    resultado = litros - (litros * 0.03);
+                }
+                else{
+                    resultado = litros * 
+                }
+
+                return resultado;
+            }
+
+            if (tipoCombustivel === 'Álcool') {
+
+                if (litros >= 20) {
+                    resultado = litros - (litros * 0.06);
+                }
+                else {
+                    resultado = litros - (litros * 0.04);
+                }
+
+                return resultado;
+            }
+        }
+    </script>
+</body>
+
+</html>
