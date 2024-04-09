@@ -10,26 +10,31 @@
 
 <body>
     <h1>Identificador de triângulo</h1>
-    
-    <section>
+
+    <section id="triangulo">
 
         <form action="">
-            <label for="ladoA">lado A:</label>
-            <input type="number" min="0" id="ladoA">
-    
-            <label for="ladoB" >lado B:</label>
-            <input type="number" min="0" id="ladoB">
-    
-            <label for="ladoC">lado C:</label>
-            <input type="number" min="0" id="ladoC">
             
-            <div id="resultado"></div>
+            <div class="elementos">
+
+                <label for="ladoA">lado A:</label>
+                <input type="number" min="0" id="ladoA">
+
+                <label for="ladoB">lado B:</label>
+                <input type="number" min="0" id="ladoB">
+
+                <label for="ladoC">lado C:</label>
+                <input type="number" min="0" id="ladoC">
+
+            </div>
             
             <div class="butao">
                 <button type="button" id="btClass">Classificar</button>
                 <button type="reset" id="btlimpa">Limpar</button>
             </div>
-    
+            
+            <div id="resultado"></div>
+
         </form>
 
     </section>
@@ -70,9 +75,9 @@
                 }
                 else {
                     tipoTriangulo = 'Escaleno'
-                }   
-            } 
-            
+                }
+            }
+
             else {
                 mensagemErro = 'A forma não é um triângulo';
             }

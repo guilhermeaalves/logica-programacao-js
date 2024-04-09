@@ -4,62 +4,43 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box; 
-    font-family: "DM Sans", sans-serif;
-    font-weight: 500;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
 body{
-    background-color: #fffdff; 
+    font-family: "Ubuntu", sans-serif;
+    background-color: ;
 }
 
 h1{
     text-align: center;
-    padding: 1%;
+    padding: 15px;
 }
 
+section#triangulo{
+    width: 700px;
+    margin: auto;
+}
 
-body {
-    padding-top: 6%;
+.elementos{
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-section{
-    display: flex;
-    width: 25vw;
-    height: 40vw;
-    background-color: #f0f0f0;
-    padding: 1%;
-    align-items: center;
-}
-
-input{
-    border: none;
-    border-radius: 1px; 
+    justify-content: space-between;
+    gap: 0.5rem;
 }
 
 .butao{
-    padding-top: 10%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+#resultado{
+    text-align: center;
+    padding: 5px;
 }
 
 button{
-    border: none;
-    border-radius: 1%;
-}
-
-button#btClass{
-    padding: 1px;
-    background-color: #4afc52;
-    border-radius: 7px;
-}
-
-button#btlimpa{
-    padding-right: 10%;
-    padding: 1px;
-    background-color: #e91001;
-    border-radius:7px;
+    width: 100%;
+    line-height: 2.2;
 }

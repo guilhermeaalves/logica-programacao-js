@@ -5,18 +5,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <style>
+        .oculto {
+            display: none;
+        }
+    </style>
 </head>
 
 <body>
 
     <form action="">
 
-        <label for="nomes">Nome para incluir:</label>
-        <input type="text" id="nomeInclusao" required autofocus>
+        <label for="nome">Nome para incluir:</label>
+        <input type="text" id="nome">
 
         <button type="reset" id="btCadastra">Cadastrar</button>
 
-        <button type="button" id="btMostrar">Mostrar</button>
+        <button type="button" id="btPesquisar" class="oculto">Pesquisar</button>
 
     </form>
 
@@ -24,34 +30,54 @@
     <div id="resultado"></div>
 
     <script>
-
+        
         let nomes = [];
+
+        document.addEventListener('keydown', (evento) => {
+            if(evento.key === 'Enter') {
+
+                evento.preventDefault(); 
+
+                if (nomes.length < 10) {
+
+                    document.querySelector('#btCadastra').click();
+                } else {
+
+                    document.querySelector('#btPesquisar').click();
+                }
+            }
+        });
+
 
         document.querySelector('#btCadastra').addEventListener('click', () => {
 
-            if (nome.lenght < 10) {
+            nomes.push(document.querySelector('#nome').value);
 
-                nomes.push(document.querySelector('#nomeInclusao').value);
+            if (nomes.length === 10) {
 
-            } else {
-               
-                if (nomes.includes(document.querySelector('#nomeInclusao').value)){
+                document.querySelector('label[for="nome"]').innerHTML = 'Nome para pesquisar:';
 
-                    console.log('ACHEI');
+                document.querySelector('#btPesquisar').classList.remove('oculto');
 
-                } else {
+                document.querySelector('#btCadastra').classList.add('oculto');
 
-                    console.log('NAO ACHEI');
-                }
             }
 
         });
 
-        document.querySelector('#btMostrar').addEventListener('click', () => {
+        document.querySelector('#btPesquisar').addEventListener('click', () => {
 
-            nomes.forEach((nome) => {
-                document.querySelector('#resultado').innerHTML += nome + '<br>';
-            })
+            const nomeBuscado = document.querySelector('#nome').value;
+
+            if (nomes.includes(nomeBuscado)) {
+
+                document.querySelector('#resultado').innerHTML = 'ACHEIIIIIIIIIIIIIIIIIIIIIII';
+
+            } else {
+
+                document.querySelector('#resultado').innerHTML = 'NÃO ACHEIIII';
+
+            }
 
         });
 
