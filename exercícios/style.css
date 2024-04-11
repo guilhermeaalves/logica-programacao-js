@@ -1,29 +1,29 @@
 /* estilo geral */
 
-*{
+* {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; 
+    box-sizing: border-box;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
-body{
+body {
     font-family: "Space Mono", monospace;
     background-color: #f8f8f8;
 }
 
-h1{
+.tituloDaPagina {
     text-align: center;
     padding: 15px;
     color: #8193B2;
 }
 
-label{
+label {
     color: #8193B2;
 }
 
-section#triangulo{
+section {
     display: flex;
     padding: 2px;
     width: 700px;
@@ -31,12 +31,13 @@ section#triangulo{
     margin: auto;
     border-radius: 10px;
     align-items: center;
+    
     justify-content: center;
     background-color: #051b3d;
     border: 1.2px solid #0c2a56;
 }
 
-.elementos{
+.elementos {
     justify-content: space-between;
     align-items: center;
     padding: 50px;
@@ -44,19 +45,19 @@ section#triangulo{
     gap: 0.5rem;
 }
 
-.butao{
+.botoes {
     display: flex;
     font-family: "Space Mono", monospace;
     justify-content: center;
     gap: 10px;
 }
 
-#resultado{
+#resultado {
     text-align: center;
     padding: 5px;
 }
 
-button{
+button {
     width: 320px;
     line-height: 2.2;
     color: #627597;
@@ -65,7 +66,7 @@ button{
     border-radius: 6px;
 }
 
-svg{
+svg {
     width: 25px;
     height: 25px;
     color: linear-gradient(#24292f, #0a3069);
@@ -81,7 +82,7 @@ svg{
     z-index: -1;
 }
 
-input{
+input {
     height: 30px;
     background-color: #08234d;
     border-radius: 6px;
@@ -89,14 +90,31 @@ input{
     color: #ffffff;
 }
 
-input:active{
-    outline: 1px solid yellow;
+input:focus {
+    outline: 1px solid blue;
 }
 
-#resultado{
+select {
+    background-color: #08234d;
+    border-radius: 6px;
+    border: none;
+    color: #ffffff;
+}
+
+select:focus {
+    outline: 1px solid blue;
+    padding-left: 6px;
+}
+
+#resultado {
     padding: 20px;
     color: #8193B2;
     font-family: "Space Mono", monospace;
+}
+
+::placeholder {
+    padding-left: 6px;
+    color: #627597;
 }
 
 .space::before {
@@ -106,15 +124,38 @@ input:active{
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: radial-gradient(2px 2px at 50px 200px, #eee, rgba(0, 0, 0, 0)), radial-gradient(2px 2px at 40px 70px, #fff, rgba(0, 0, 0, 0)), radial-gradient(3px 4px at 120px 40px, #ddd, rgba(0, 0, 0, 0)) ;
-    animation: zoom 10s infinite;
+    background-image:
+        radial-gradient(2px 2px at 50px 200px, #eee, rgba(0, 0, 0, 0)),
+        radial-gradient(2px 2px at 40px 70px, #fff, rgba(0, 0, 0, 0)),
+        radial-gradient(3px 4px at 120px 40px, #ddd, rgba(0, 0, 0, 0)),
+        radial-gradient(2px 2px at calc(100% - 50px) calc(100% - 200px), #eee, rgba(0, 0, 0, 0)),
+        radial-gradient(2px 2px at calc(100% - 40px) calc(100% - 70px), #fff, rgba(0, 0, 0, 0)),
+        radial-gradient(3px 4px at calc(100% - 120px) calc(100% - 40px), #ddd, rgba(0, 0, 0, 0)),
+        radial-gradient(2px 2px at 50px calc(100% - 200px), #eee, rgba(0, 0, 0, 0)),
+        radial-gradient(2px 2px at 40px calc(100% - 70px), #fff, rgba(0, 0, 0, 0)),
+        radial-gradient(3px 4px at 120px calc(100% - 40px), #ddd, rgba(0, 0, 0, 0)),
+        radial-gradient(2px 2px at calc(100% - 50px) 200px, #eee, rgba(0, 0, 0, 0)),
+        radial-gradient(2px 2px at calc(100% - 40px) 70px, #fff, rgba(0, 0, 0, 0)),
+        radial-gradient(3px 4px at calc(100% - 120px) 40px, #ddd, rgba(0, 0, 0, 0)),
+        radial-gradient(2px 2px at 50% 50%, #eee, rgba(0, 0, 0, 0)),
+        radial-gradient(2px 2px at 50% 50%, #fff, rgba(0, 0, 0, 0)),
+        radial-gradient(3px 4px at 50% 50%, #ddd, rgba(0, 0, 0, 0));
+    animation: zoom 10s infinite linear;
 }
 
 @keyframes zoom {
     from {
         transform: scale(1);
     }
+
     to {
-        transform: scale(2); /* Ajuste o fator de escala conforme necessário */
+        transform: scale(2);
     }
+}
+
+/* ================= EX 3 ================== */
+
+#time1,
+#time2 {
+    width: 200px;
 }

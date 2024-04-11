@@ -9,26 +9,39 @@
 </head>
 
 <body>
-    <h1>Desconto Funcionário</h1>
+    <div class="space"></div>
 
-    <form action="" id="formDesconto">
+    <h1 class="tituloDaPagina">Desconto Funcionário</h1>
 
-        <label for="valor">Valor:</label>
-        <input type="number" id="valor">
+    <section>
 
-        <label for="tipo" id="comprador">Tipo:</label>
+        <form action="">
+    
+            <div class="elementos">
+                
+                <label for="valor">Valor:</label>
+                <input type="number" id="valor">
+        
+                <label for="tipo" id="comprador">Tipo:</label>
+        
+                <select id="tipoComprador">
+                    <option value="comum" selected>Cliente comum</option>
+                    <option value="funcionario">Funcionário</option>
+                    <option value="vip">VIP</option>
+                </select>
+            </div>
+    
+        </form>
 
-        <select id="tipoComprador">
-            <option value="comum" selected>Cliente comum</option>
-            <option value="funcionario">Funcionário</option>
-            <option value="vip">VIP</option>
-        </select>
+        <div class="botoes">
+            <button type="button" id="btCalc">Calcular</button>
+            <button type="reset" id="btReset">Limpar</button>
+    
+        </div>
+    
+        <div id="resultado"></div>
+    </section>
 
-        <button type="button" id="btCalc">Calcular</button>
-        <button type="reset" id="btReset">Limpar</button>
-    </form>
-
-    <div id="resultado"></div>
 
     <script>
 
