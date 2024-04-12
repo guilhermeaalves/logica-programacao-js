@@ -44,13 +44,13 @@
             <option value="a" selected>Álcool</option>
         </select>
 
-        <button type="button" id="btCombustivel">Calcular</button>
-        <button type="reset" id="btReset">Limpar</button>
+        <button type="button" id="btClass">Calcular</button>
+        <button type="reset" id="btlimpa">Limpar</button>
     </form>
     <div id="resultado"></div>
     <script>
 
-        document.getElementById('btCombustivel').addEventListener('click', function () {
+        document.getElementById('btClass').addEventListener('click', function () {
             litros = parseFloat(document.getElementById('litros').value);
             tipoCombustivel = document.getElementById('tipoCombustivel').value;
 
@@ -59,7 +59,7 @@
             document.getElementById('resultado').innerHTML = valorFinal;
         });
 
-        document.querySelector('#btReset').addEventListener('click', function () {
+        document.querySelector('#btlimpa').addEventListener('click', function () {
             document.querySelector('#resultado').innerHTML = "";
         });
 

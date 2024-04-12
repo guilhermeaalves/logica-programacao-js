@@ -30,7 +30,7 @@
             </div>
 
             <div class="botoes">
-                <button type="reset" id="btCadastra">Cadastrar</button>
+                <button type="reset" id="btClass">Cadastrar</button>
                 <button type="button" id="btPesquisar" class="oculto">Pesquisar</button>
             </div>
 
@@ -54,7 +54,7 @@
 
                 if (nomes.length < 10) {
 
-                    document.querySelector('#btCadastra').click();
+                    document.querySelector('#btClass').click();
                 } else {
 
                     document.querySelector('#btPesquisar').click();
@@ -63,7 +63,7 @@
         });
 
 
-        document.querySelector('#btCadastra').addEventListener('click', () => {
+        document.querySelector('#btClass').addEventListener('click', () => {
 
             nomes.push(document.querySelector('#nome').value);
 
@@ -73,7 +73,7 @@
 
                 document.querySelector('#btPesquisar').classList.remove('oculto');
 
-                document.querySelector('#btCadastra').classList.add('oculto');
+                document.querySelector('#btClass').classList.add('oculto');
 
             }
 
