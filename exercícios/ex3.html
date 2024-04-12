@@ -28,8 +28,8 @@
             </div>
 
             <div class="butao">
-                <button type="button" id="btResultado">Resultado</button>
-                <button type="reset" id="btReset">Limpar</button>
+                <button type="button" id="btClass">Resultado</button>
+                <button type="reset" id="btlimpa">Limpar</button>
             </div>
 
             <div id="resultado"></div>
@@ -39,7 +39,7 @@
 
     <script>
 
-        document.getElementById('btResultado').addEventListener('click', function () {
+        document.getElementById('btClass').addEventListener('click', function () {
 
             time1 = parseFloat(document.getElementById('time1').value);
             time2 = parseFloat(document.getElementById('time2').value);
@@ -48,7 +48,7 @@
             document.getElementById('resultado').innerHTML = valorFinal;
         });
 
-        document.querySelector('#btReset').addEventListener('click', function () {
+        document.querySelector('#btlimpa').addEventListener('click', function () {
             document.querySelector('#resultado').innerHTML = "";
         });
 
