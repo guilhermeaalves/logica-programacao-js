@@ -21,25 +21,29 @@ document.querySelector('#btlimpa').addEventListener('click', function () {
 function classificaTriangulo(ladoA, ladoB, ladoC) {
 
     let mensagemErro, tipoTriangulo;
+    if (!isNaN(ladoA || ladoB || ladoC)) {
 
-    if ((ladoA < (ladoB + ladoC)) && (ladoB < (ladoA + ladoC)) && (ladoC < (ladoA + ladoB))) {
+        if ((ladoA < (ladoB + ladoC)) && (ladoB < (ladoA + ladoC)) && (ladoC < (ladoA + ladoB))) {
 
-        if (ladoA === ladoB && ladoB === ladoC) {
-            tipoTriangulo = 'Equilátero';
+            if (ladoA === ladoB && ladoB === ladoC) {
+                tipoTriangulo = 'Equilátero';
+            }
+            else if (ladoA === ladoB || ladoA === ladoC || ladoB === ladoC) {
+                tipoTriangulo = 'Isóceles'
+            }
+            else {
+                tipoTriangulo = 'Escaleno'
+            }
+        } else {
+            mensagemErro = 'A forma não é um triângulo';
         }
-        else if (ladoA === ladoB || ladoA === ladoC || ladoB === ladoC) {
-            tipoTriangulo = 'Isóceles'
-        }
-        else {
-            tipoTriangulo = 'Escaleno'
-        }
+
+        return tipoTriangulo ?? mensagemErro;
+        
+    } else {
+        return 'ERRO: O número digitado para classificação, não é um número válido.';
     }
 
-    else {
-        mensagemErro = 'A forma não é um triângulo';
-    }
-
-    return tipoTriangulo ?? mensagemErro;
 
     // ?? => operador de coalescência, pega o primeiro valor válido.
 }
