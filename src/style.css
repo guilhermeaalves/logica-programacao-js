@@ -49,6 +49,8 @@ section {
 }
 
 .botoes {
+    display: flex;
+    justify-content: center;
     font-family: "Space Mono", monospace;
     gap: 10px;
 }
