@@ -5,7 +5,7 @@ document.querySelector('#btClass').addEventListener('click', ()=>{
     habitantes = parseFloat(document.querySelector('#habitantes').value);
     const resultado = taxaMouN(nascimentos, taxa, habitantes);
 
-    document.querySelector('#resultado').innerHTML = resultado;
+    document.querySelector('#resultado').innerHTML = resultado.toFixed(2);
 
     function taxaMouN(nascimentos, taxa, habitantes){
 
