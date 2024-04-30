@@ -121,6 +121,10 @@ select:focus {
     color: #627597;
 }
 
+.monetario::before {
+    content: "R$";
+}
+
 
 #stars{
     width: 1px;
