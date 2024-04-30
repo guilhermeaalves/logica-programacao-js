@@ -7,8 +7,16 @@ document.querySelector('#btClass').addEventListener('click', () => {
 
     const produto = calculaDesconto(codigoProduto, qtDeProduto);
 
-    document.querySelector('#resultado').innerHTML = produto.valorFinal.toFixed(2);
+    const pDescricao = document.createElement('p');
+    pDescricao.innerHTML = produto.descricao;
+    pDescricao.setAttribute('data-produto', produto.codigo);
+    
+    const pValorFinal = document.createElement('p');
+    pValorFinal.innerHTML = produto.valorFinal.toFixed(2);
+    pValorFinal.classList.add('monetario');
 
+    document.querySelector('#resultado').append(pDescricao, pValorFinal);
+    
 });
 
 
