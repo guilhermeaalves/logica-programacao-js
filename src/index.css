@@ -1,0 +1,58 @@
+/* <------------GENERAL STYLE-----------> */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {background-color: rgb(6, 12, 33);}
+
+ul {list-style: none;}
+
+/* <------------HEADER STYLE------------>*/
+
+header {
+
+}
+
+/* <------------CONTAINER STYLE------------>*/
+
+span {
+    font-size: 2rem;
+    font-family: "Gemunu Libre", sans-serif;
+    font-weight: 200;
+    color: #36a0c3;
+}
+
+
+.container a {
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: 350;
+    text-decoration: none;
+    font-family: "Josefin Sans", sans-serif;
+    color: #fff;
+    padding: 10px;
+}
+
+.container li{
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    border-style: solid solid; 
+    border-color: #287895; 
+    border-top-width: 1px; 
+    border-right-width: 1px;
+    width: 250px;
+    padding: 10px;
+}
+
+.container{
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; 
+}
