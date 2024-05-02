@@ -49,6 +49,8 @@ section {
 }
 
 .botoes {
+    display: flex;
+    justify-content: center;
     font-family: "Space Mono", monospace;
     gap: 10px;
 }
@@ -117,6 +119,10 @@ select:focus {
     font-family: "Space Mono", monospace;
     padding-left: 6px;
     color: #627597;
+}
+
+.monetario::before {
+    content: "R$";
 }
 
 
