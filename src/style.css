@@ -12,6 +12,7 @@ html {
     overflow: hidden;
     background: radial-gradient(ellipse at bottom, #24292f 0%, #0a3069 100%);
     font-family: "Space Mono", monospace;
+    color: #8193B2;
 }
 
 .tituloDaPagina {
@@ -43,9 +44,9 @@ section {
 }
 
 .elementos {
+    justify-content: space-around;
     padding: 50px;
     display: flex;
-    gap: 0.5rem;
 }
 
 .botoes {
@@ -64,6 +65,7 @@ section {
 }
 
 #resultado {
+    color: #8193B2;
     text-align: center;
     padding: 5px;
 }
@@ -86,6 +88,7 @@ svg {
 
 
 input {
+    width: 10rem;
     height: 30px;
     background-color: #08234d;
     border-radius: 6px;
@@ -110,6 +113,8 @@ select:focus {
 }
 
 #resultado {
+    display: inline-flex;
+    justify-content: center;
     padding: 20px;
     color: #8193B2;
     font-family: "Space Mono", monospace;
@@ -125,6 +130,14 @@ select:focus {
     content: "R$";
 }
 
+@keyframes animStar {
+    from{
+        transform: translateY(0px);
+    }
+    to{
+        transform: translateY(-2000px);
+    }
+}
 
 #stars{
     width: 1px;
@@ -312,7 +325,6 @@ select:focus {
 
 #stars::after{
     content: '';
-    position: absolute;
     top: 2000px;
     width: 1px;
     height: 1px;
@@ -556,7 +568,6 @@ select:focus {
 
 #stars2::after{
     content: '';
-    position: absolute;
     top: 2000px;
     width: 2px;
     height: 2px;
@@ -649,7 +660,6 @@ select:focus {
 
 #stars3::after{
     content: '';
-    position: absolute;
     background: transparent;
     top: 2000px;
     width: 3px;
@@ -680,15 +690,6 @@ select:focus {
     16px 1650px #fff, 1021px 1075px #fff, 723px 424px #fff, 1175px 41px #fff,
     494px 1957px #fff, 1296px 431px #fff, 175px 1507px #fff, 831px 121px #fff,
     498px 1947px #fff, 617px 880px #fff, 240px 403px #fff;
-}
-
-@keyframes animStar {
-    from{
-        transform: translateY(0px);
-    }
-    to{
-        transform: translateY(-2000px);
-    }
 }
 /* ================= EX 3 ================== */
 
