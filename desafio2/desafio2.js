@@ -1,11 +1,11 @@
-document.querySelector('#btCalcImc').addEventListener('click', function () {
+document.querySelector('#btClass').addEventListener('click', function () {
     const peso = parseFloat(document.querySelector('#peso').value);
     const altura = parseFloat(document.querySelector('#altura').value);
     const imc = calculaIMC(peso, altura);
-    document.querySelector('#resultadoIMC').innerHTML = imc;
+    document.querySelector('#resultado').innerHTML = imc;
 });
-document.querySelector('#Btreset').addEventListener('click', function () {
-    document.querySelector('#resultadoIMC').innerHTML = "";
+document.querySelector('#btlimpa').addEventListener('click', function () {
+    document.querySelector('#resultado').innerHTML = "";
 });
 
 function calculaIMC(peso, altura) {
