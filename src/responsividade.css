@@ -1,0 +1,27 @@
+/* Mobile */
+@media screen and (max-width: 480px) {
+    section {
+        width: 80%;
+    }
+
+    button {
+        width: 80%;
+    }
+
+    input {
+        width: 100%;
+    }
+
+    .elementos {
+        flex-direction: column;
+        gap: 10px;
+        padding-bottom: 30px;
+    }
+
+}
+
+/* Tablet */
+@media screen and (max-width: 768px) {}
+
+/* Tvs */
+@media screen and (min-width: 1921px) {}
