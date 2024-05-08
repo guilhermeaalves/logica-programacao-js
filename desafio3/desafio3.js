@@ -24,7 +24,7 @@ function converteTemperatura(valorTemperatura, escalaAtual, escalaConvertida) {
         if (escalaAtual === 'c') {
 
             if (escalaConvertida === 'k') {
-                resultado = escalaAtual + 273.15.toFixed(2);
+                resultado = escalaAtual + 273.15;
             }
 
             else if (escalaConvertida === 'f') {
@@ -38,11 +38,11 @@ function converteTemperatura(valorTemperatura, escalaAtual, escalaConvertida) {
         } else if (escalaAtual === 'f') {
 
             if (escalaConvertida === 'k') {
-                resultado = (valorTemperatura - 32) * 5 / 9 + 273.15.toFixed(2);
+                resultado = (valorTemperatura - 32) * 5 / 9 + 273.15;
             }
 
             else if (escalaConvertida === 'c') {
-                resultado = (valorTemperatura - 32) * 5 / 9 .toFixed(2);
+                resultado = (valorTemperatura - 32) * 5 / 9 ;
             }
 
             else if (escalaConvertida === 'f') {
@@ -52,11 +52,11 @@ function converteTemperatura(valorTemperatura, escalaAtual, escalaConvertida) {
         else if (escalaAtual === 'k') {
 
             if (escalaConvertida === 'f') {
-                resultado = valorTemperatura * 9 / 5 - 459.67.toFixed(2);
+                resultado = valorTemperatura * 9 / 5 - 459.67;
             }
 
             else if (escalaConvertida === 'c') {
-                resultado = valorTemperatura - 273.15.toFixed(2);
+                resultado = valorTemperatura - 273.15;
             }
 
             else if (escalaConvertida === 'k') {
@@ -68,7 +68,7 @@ function converteTemperatura(valorTemperatura, escalaAtual, escalaConvertida) {
         }
     }
 
-    return resultado;
+    return resultado.toFixed(2);
 }
 
 
