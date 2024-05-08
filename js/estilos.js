@@ -1,7 +1,7 @@
 const links = [
     {"rel": "stylesheet", "href": "/src/reset.css"},
-    {"rel": "stylesheet", "href": "/src/style.css"},
-    {"rel": "stylesheet", "href": "/src/responsividade.css"}
+    {"rel": "stylesheet", "href": "/src/geral.css"},
+    {"rel": "stylesheet", "href": "/src/responsividadeGeral.css"}
 ];
 
 links.forEach(link => {
