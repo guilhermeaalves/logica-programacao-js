@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    
+
     <div id="stars"></div>
     <div id="stars2"></div>
     <div id="stars3"></div>
@@ -17,34 +17,37 @@
     <h1 class="tituloDaPagina">Desconto Funcionário</h1>
 
     <section>
-        
+
         <form action="">
-            
+
             <div class="elementos">
-                
+
                 <label for="valor">Valor:</label>
-                <input type="number" id="valor">
-                
+                <input type="text" id="valor">
+
                 <label for="tipo" id="comprador">Tipo:</label>
+
+                <input list="tipoComprador">
+
+                <datalist id="tipoComprador">
+                    <option value="Cliente comum">
+                    <option value="Funcionário">
+                    <option value="vip">
+                </datalist>
                 
-                <select id="tipoComprador">
-                    <option value="comum" selected>Cliente comum</option>
-                    <option value="funcionario">Funcionário</option>
-                    <option value="vip">VIP</option>
-                </select>
             </div>
-            
+
         </form>
-        
+
         <div class="botoes">
             <button type="button" id="btClass">Calcular</button>
             <button type="reset" id="btlimpa">Limpar</button>
-            
+
         </div>
-        
+
         <div id="resultado"></div>
     </section>
-    
+
     <script src="/js/navbar.js"></script>
     <script src="ex2.js"></script>
 
