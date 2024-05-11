@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classificador de Triângulo</title>
+    <script src="/src/js/estilos.js"></script>
+</head>
+
+<body>
+
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>
+
+    <h1 class="tituloDaPagina">Classificador De Triângulo</h1>
+
+    <section>
+
+        <form action=".">
+
+            <div class="elementos">
+
+                <div class="elementosTriangulo">
+
+                    <label for="ladoA"></label>
+                    <input type="number" min="0" id="ladoA" placeholder="Lado A:">
+
+                    <label for="ladoB"></label>
+                    <input type="number" min="0" id="ladoB" placeholder="Lado B:">
+
+                    <label for="ladoC"></label>
+                    <input type="number" min="0" id="ladoC" placeholder="Lado C:">
+
+                </div>
+
+            </div>
+
+            <div class="botoes">
+                <button type="button" id="btClass">Classificar</button>
+                <button type="reset" id="btlimpa">Limpar</button>
+            </div>
+
+            <div id="resultado"></div>
+
+        </form>
+
+    </section>
+
+    <script src="/src/js/navbar.js"></script>
+    <script src="/src/js/classifica-triangulo.js"></script>
+</body>
+
+</html>

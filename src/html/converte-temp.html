@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Temperatura</title>
+    <script src="/src/js/estilos.js"></script>
+</head>
+<body>
+    <h2>Conversor de Temperatura</h2>
+
+    <form action="" id=formConversor>
+
+        <label for="valorTemperatura">Temperatura:</label>
+        <input type="number" id="valorTemperatura">
+
+        <label for="escalaAtual">De:</label>
+        <select id="escalaAtual">
+            <option value="c" id="cAtual" selected>Celsius</option>
+            <option value="f" id="fAtual">Fahrenheit</option>
+            <option value="k" id="kAtual">Kelvin</option>
+        </select>
+
+        <label for="escalaConvertida">Para:</label>
+        <select id="escalaConvertida">
+            <option value="c" selected>Celsius</option>
+            <option value="f">Fahrenheit</option>
+            <option value="k">Kelvin</option>
+        </select>
+
+        <button type="button" id="btCalcTemp">Converter</button>
+        <button type="reset" id="btResetTemp">Limpar</button>
+    </form>
+
+    <div id="resultadoTemp"></div>
+
+    <script src="/src/js/navbar.js"></script>
+    <script src="/src/js/converte-temp.js"></script>
+</body>
+</html>

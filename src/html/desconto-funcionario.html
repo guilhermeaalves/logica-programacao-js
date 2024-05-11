@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desconto Funcionário</title>
+    <script src="/src/js/estilos.js"></script>
+    <script src="/src/js/estilos.js"></script>
+</head>
+
+<body>
+
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>
+
+    <h1 class="tituloDaPagina">Desconto Funcionário</h1>
+
+    <section>
+
+        <form action="">
+
+            <div class="elementos">
+
+                <label for="valor">Valor:</label>
+                <input type="text" id="valor">
+
+                <label for="tipo" id="comprador">Tipo:</label>
+
+                <input list="tipoComprador">
+
+                <datalist id="tipoComprador">
+                    <option value="Cliente comum">
+                    <option value="Funcionário">
+                    <option value="vip">
+                </datalist>
+                
+            </div>
+
+        </form>
+
+        <div class="botoes">
+            <button type="button" id="btClass">Calcular</button>
+            <button type="reset" id="btlimpa">Limpar</button>
+
+        </div>
+
+        <div id="resultado"></div>
+    </section>
+
+    <script src="/src/js/navbar.js"></script>
+    <script src="/src/js/desconto-funcionario.js"></script>
+
+</body>
+
+</html>
