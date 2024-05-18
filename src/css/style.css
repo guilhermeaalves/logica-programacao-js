@@ -79,7 +79,7 @@ header {
 
 p {
     font-family: "DM Sans", sans-serif;
-    color: #D6D6D6;
+    color: #9c9a9a;
     font-weight: 300;
     font-size: 1.1rem;
     padding: 10px;
@@ -90,6 +90,12 @@ span {
     font-family: "Gemunu Libre", sans-serif;
     font-weight: 200;
     color: #00A9FF;
+}
+
+svg {
+    display: flex;
+    align-items: center;
+    margin: 10px 0 0 10px;
 }
 
 .circle {
@@ -110,7 +116,8 @@ span {
     border-radius: 10px;
 }
 .container a {
-    display: inline-block;
+    align-items: center;
+    display: inline-flex;
     font-weight: 600;
     font-size: 1.2rem;
     text-decoration: none;
