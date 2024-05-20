@@ -1,26 +1,38 @@
 /* Mobile */
 @media screen and (max-width: 480px) {
 
-    .menu-navegacao {
-        display: none;
-    }
-
     .container {
         width: 100%;
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
     }
 
     .card{
         width: 80%;
     }
-   
+
 }
 
 /* Tablet */
 @media screen and (max-width: 768px) {
-    .menu-navegacao {
-        display: none;
+    
+    .logo-menu {
+        height: 100vh;
+    }
+    ul {
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: #fff;
+        width: 100vw;
+        justify-content: space-around;
+        flex-direction: column;
+    }
+
+    .hamburguer {
+        right: 100px;
+        display: block;
+        z-index: 1;
     }
 }
 
