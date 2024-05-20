@@ -10,41 +10,43 @@ const ancoras = [
 ];
 
 function criaAncora(url, texto) {
-
     const ancora = document.createElement('a');
     ancora.setAttribute('href', url);
     ancora.innerHTML = texto;
-
     return ancora;
 }
 
 function criaLi(ancora) {
-    
     const li = document.createElement('li');
     li.appendChild(ancora);
-    
     return li;
 }
 
 function criaUlNav(ancoras) {
-
     const ul = document.createElement('ul');
-
     ancoras.forEach(ancora => {
         const a = criaAncora(ancora.url, ancora.texto);
         const li = criaLi(a);
         ul.appendChild(li);
     });
-
     return ul;
+}
+
+function criaBotaoComClasse(classe) {
+    const btn = document.createElement('button');
+    btn.classList.add(classe);
+    return btn;
 }
 
 // <nav> do menu
 const nav = document.createElement('nav');
 nav.classList.add('menu-navegacao');
-nav.appendChild(criaUlNav(ancoras));
 
-// Aqui segue de acordo com a solução do professor...
+// Adicionar o botão ao nav, acima da ul
+const botaoHamburguer = criaBotaoComClasse('hamburguer');
+nav.appendChild(botaoHamburguer);
+
+nav.appendChild(criaUlNav(ancoras));
 
 // <span>Desafios & Exercícios</span>
 const spanLogo = document.createElement('span');
@@ -64,9 +66,7 @@ divLogoMenu.append(divLogo, nav);
 const header = document.createElement('header');
 header.appendChild(divLogoMenu);
 
-// document.body.insertBefore(nav, document.body.firstChild);
 document.body.insertAdjacentElement('afterbegin', header);
-
 
 // ** Estilos do Navbar **
 const linkNavbar = document.createElement('link');
