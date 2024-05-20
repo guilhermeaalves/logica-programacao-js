@@ -7,7 +7,7 @@
         flex-direction: column;
     }
 
-    .card{
+    .card {
         width: 80%;
     }
 
@@ -15,10 +15,12 @@
 
 /* Tablet */
 @media screen and (max-width: 768px) {
-    
+
     .logo-menu {
+        display: none;
         height: 100vh;
     }
+
     ul {
         position: fixed;
         top: 0;
@@ -30,10 +32,13 @@
     }
 
     .hamburguer {
-        right: 100px;
         display: block;
-        z-index: 1;
     }
+
+    .active {
+        display: block;
+    }
+
 }
 
 /* Tvs */
