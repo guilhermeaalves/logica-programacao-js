@@ -169,7 +169,7 @@ svg {
 
 input {
     padding: 5px;
-    width: 10rem;
+    width: 80%;
     height: 30px;
     background-color: #08234d;
     border-radius: 6px;
@@ -225,9 +225,10 @@ datalist:focus {
 /* <===========CLASSIFICA TRIÂNGULO===========>*/
 
 .elementosTriangulo {
-    justify-content: space-around;
     display: flex;
-    gap: 10px;
+    justify-content: space-evenly;
+    padding-bottom: 60px;
+    gap: 5px;
 }
 
 /* <================CALCULA PLACAR=================> */
