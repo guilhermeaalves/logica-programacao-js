@@ -44,9 +44,17 @@
 }
 @media screen and (max-width: 675px) {
 
+    .elementosTriangulo {
+        width: 80%;
+    }
+
     .elementos {
         flex-direction: column;
         flex-wrap: wrap;
+    }
+
+    input {
+        width: 100%;
     }
 }
 /* Tablet */
