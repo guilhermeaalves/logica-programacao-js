@@ -1,4 +1,9 @@
-const hamburger = document.querySelector(".hamburger");
-const menubar = document.querySelector(".logo-menu");
+document.addEventListener('DOMContentLoaded', () => {
+    const menuHamburguer = document.querySelector('.hamburguer');
+    const menu = document.querySelector('.logo-menu');
 
-hamburger.addEventListener("click", () => menubar.classList.toggle("active"));
+    menuHamburguer.addEventListener('click', () => {
+        menu.classList.toggle('active');
+        menuHamburguer.classList.toggle('menuActive');
+    });
+});
