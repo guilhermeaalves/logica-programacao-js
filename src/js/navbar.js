@@ -24,6 +24,7 @@ function criaLi(ancora) {
 
 function criaUlNav(ancoras) {
     const ul = document.createElement('ul');
+    ul.classList.add('itens-menu');
     ancoras.forEach(ancora => {
         const a = criaAncora(ancora.url, ancora.texto);
         const li = criaLi(a);
@@ -45,7 +46,6 @@ nav.classList.add('menu-navegacao');
 // Adicionar o botão ao nav, acima da ul
 const botaoHamburguer = criaBotaoComClasse('hamburguer');
 nav.appendChild(botaoHamburguer);
-
 nav.appendChild(criaUlNav(ancoras));
 
 // <span>Desafios & Exercícios</span>

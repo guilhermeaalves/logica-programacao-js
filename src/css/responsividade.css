@@ -17,14 +17,13 @@
 @media screen and (max-width: 768px) {
 
     .logo-menu {
-        display: none;
         height: 100vh;
+        background: #fff;
     }
 
     ul {
-        position: fixed;
         top: 0;
-        left: 0;
+        right: 0;
         background: #fff;
         width: 100vw;
         justify-content: space-around;
@@ -32,10 +31,7 @@
     }
 
     .hamburguer {
-        display: block;
-    }
-
-    .active {
+        z-index: 1;
         display: block;
     }
 
