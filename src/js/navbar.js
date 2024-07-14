@@ -42,10 +42,6 @@ function criaBotaoComClasse(classe) {
 // <nav> do menu
 const nav = document.createElement('nav');
 nav.classList.add('menu-navegacao');
-
-// Adicionar o botão ao nav, acima da ul
-const botaoHamburguer = criaBotaoComClasse('hamburguer');
-nav.appendChild(botaoHamburguer);
 nav.appendChild(criaUlNav(ancoras));
 
 // <span>Desafios & Exercícios</span>
@@ -60,7 +56,10 @@ divLogo.appendChild(spanLogo);
 // <div class="logo-menu">
 const divLogoMenu = document.createElement('div');
 divLogoMenu.classList.add('logo-menu');
-divLogoMenu.append(divLogo, nav);
+
+// Cria o botão hamburguer e adiciona à divLogoMenu
+const botaoHamburguer = criaBotaoComClasse('hamburguer');
+divLogoMenu.append(botaoHamburguer, divLogo, nav);
 
 // <header>
 const header = document.createElement('header');

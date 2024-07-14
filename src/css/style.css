@@ -90,6 +90,7 @@ svg {
     margin: 10px 0 0 10px;
 }
 
+
 .card {
     width: 100%;
     background-color: #FFFFFF;
@@ -107,6 +108,7 @@ svg {
 }
 
 .container {
+    margin: 4rem 4rem;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     margin-top: 5rem;
@@ -121,6 +123,7 @@ svg {
     background: none;
     border-top: 3px solid #000;
     cursor: pointer;
+    height: 20px;
 }
 
 .hamburguer::before,

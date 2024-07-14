@@ -1,6 +1,10 @@
 /* Mobile */
 @media screen and (max-width: 480px) {
 
+    .menu-navegacao {
+        display: none;
+    }
+
     .container {
         width: 100%;
         display: flex;
@@ -16,9 +20,12 @@
 /* Tablet */
 @media screen and (max-width: 768px) {
 
-    .logo-menu {
-        height: 100vh;
-        background: #fff;
+    .menu-navegacao {
+        display: none;
+    }
+
+    .hamburguer {
+        display: block;
     }
 
     ul {
@@ -30,12 +37,25 @@
         flex-direction: column;
     }
 
+    .container {
+        grid-template-columns: repeat(1, 1fr);
+
+    }
+
+    header{
+        display: flex;
+        justify-content: space-between;
+    }
+
     .hamburguer {
         z-index: 1;
-        display: block;
     }
 
 }
 
 /* Tvs */
-@media screen and (min-width: 1921px) {}
+@media screen and (min-width: 1440px) {
+     .hamburguer {
+        display: none;
+    }
+}
